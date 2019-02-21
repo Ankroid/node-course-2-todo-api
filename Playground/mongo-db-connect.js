@@ -18,12 +18,12 @@ client.connect (err => {
   assert.equal (null, err);
   console.log ('Connected Sucessfully to Server');
   const db = client.db(dbName);
-    // insertDocuments(db,()=>{
-    //     client.close ();
-    // });
-    // insertDocuments2(db,()=>{
-    //     client.close ();
-    // });
+    insertDocuments(db,()=>{
+        client.close ();
+    });
+    insertDocuments2(db,()=>{
+        client.close ();
+    });
 });
 
 
